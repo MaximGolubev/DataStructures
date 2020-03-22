@@ -29,7 +29,7 @@ public:
 
 	// доступ к элементу, 
 	// должен работать за O(1)
-	ValueType operator[](const size_t i) const;
+	ValueType& operator[](const size_t i) const;
 
 	// добавить в конец,
 	// должен работать за amort(O(1))
