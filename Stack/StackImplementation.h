@@ -13,7 +13,6 @@ public:
 	// удаление с хвоста
 	virtual void pop() = 0;
 	// посмотреть элемент в хвосте
-	virtual ValueType& top() = 0;
 	virtual const ValueType& top() const = 0;
 	// проверка на пустоту
 	virtual bool isEmpty() const = 0;
