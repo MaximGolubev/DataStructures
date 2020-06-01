@@ -34,14 +34,15 @@ public:
 	////
 
 	// доступ к значению элемента по индексу
-	ValueType& operator[](const size_t pos) const;
+	const ValueType& operator[](const size_t pos) const;
+	ValueType& operator[](const size_t pos);
 	// доступ к узлу по индексу
 	LinkedList::Node* getNode(const size_t pos) const;
 	
 	// вставка элемента по индексу, сначала ищем, куда вставлять (О(n)), потом вставляем (O(1))
 	void insert(const size_t pos, const ValueType& value);
 	// вставка элемента после узла, (O(1))
-	static void insertAfterNode(Node* node, const ValueType& value);
+	void insertAfterNode(Node* node, const ValueType& value);
 	// вставка в конец (О(n))
 	void pushBack(const ValueType& value);
 	// вставка в начало (О(1))
